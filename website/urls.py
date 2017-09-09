@@ -1,3 +1,4 @@
+# encoding: utf-8
 from django.conf.urls import patterns, include, url
 
 from django.conf import settings
@@ -15,7 +16,9 @@ urlpatterns = patterns('',
                        url(r'^$', Home),
                        url(r'^about/$', About),
 
-                       url(r'^accounts/', include('UserManage.urls')),
+
+                       # 后台管理
+                       url(r'^accounts/', include('mg.urls')),
 
                        # static
                        url(r'^static/(?P<path>.*)$', 'django.views.static.serve',
