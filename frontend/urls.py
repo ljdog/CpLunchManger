@@ -1,7 +1,8 @@
 from django.conf.urls import patterns, include, url
-
 urlpatterns = patterns(
-    url(r'^$', 'views.main.hellow', name='main_hellow'),
+    '',
+    url(r'', 'frontend.views.main.hellow', name='main_hellow'),
+    # url('hell', 'views.main.hellow', name='main_hellow'),
     # url(r'^logout/$', 'user.LogoutUser', name='logouturl'),
     #
     # url(r'^user/add/$', 'user.AddUser', name='adduserurl'),
