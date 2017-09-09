@@ -35,7 +35,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'UserManage',
+    'mg',
+    # 'frontend',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -92,7 +93,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-AUTH_USER_MODEL = 'UserManage.User'
+AUTH_USER_MODEL = 'mg.User'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
