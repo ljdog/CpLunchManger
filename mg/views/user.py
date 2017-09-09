@@ -6,11 +6,11 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response, RequestContext
 from django.contrib.auth.decorators import login_required
 from website.common.CommonPaginator import SelfPaginator
-from UserManage.views.permission import PermissionVerify
+from mg.views.permission import PermissionVerify
 
 from django.contrib import auth
 from django.contrib.auth import get_user_model
-from UserManage.forms import LoginUserForm, ChangePasswordForm, AddUserForm, EditUserForm
+from mg.forms import LoginUserForm, ChangePasswordForm, AddUserForm, EditUserForm
 
 
 def LoginUser(request):

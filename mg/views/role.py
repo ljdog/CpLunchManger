@@ -6,10 +6,10 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response, RequestContext
 from django.contrib.auth.decorators import login_required
 from website.common.CommonPaginator import SelfPaginator
-from UserManage.views.permission import PermissionVerify
+from mg.views.permission import PermissionVerify
 
-from UserManage.forms import RoleListForm
-from UserManage.models import RoleList
+from mg.forms import RoleListForm
+from mg.models import RoleList
 
 
 @login_required

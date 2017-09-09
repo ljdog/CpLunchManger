@@ -4,7 +4,7 @@
 from django import forms
 from django.contrib import auth
 from django.contrib.auth import get_user_model
-from UserManage.models import User, RoleList, PermissionList
+from mg.models import User, RoleList, PermissionList
 
 
 class LoginUserForm(forms.Form):
