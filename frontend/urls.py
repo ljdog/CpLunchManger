@@ -1,7 +1,13 @@
 from django.conf.urls import patterns, include, url
 urlpatterns = patterns(
     '',
-    url(r'', 'frontend.views.main.hellow', name='main_hellow'),
+    url(r'', 'frontend.views.main.index', name='main_index'),
+    url(r'^register', 'frontend.views.main.register', name='main_register'),
+    url(r'^popular_Restaurents', 'frontend.views.main.popular_Restaurents', name='main_popular_Restaurents'),
+    url(r'^order', 'frontend.views.main.order', name='main_order'),
+    url(r'^login', 'frontend.views.main.login', name='main_login'),
+    url(r'^contact', 'frontend.views.main.contact', name='main_contact'),
+
     # url('hell', 'views.main.hellow', name='main_hellow'),
     # url(r'^logout/$', 'user.LogoutUser', name='logouturl'),
     #
