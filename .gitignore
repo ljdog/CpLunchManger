@@ -5,3 +5,4 @@
 .svn
 local_settings.py
 nohup.out
+.idea/workspace.xml
