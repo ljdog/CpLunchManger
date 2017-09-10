@@ -1,4 +1,6 @@
+# encoding:utf-8
 from django.conf.urls import patterns, include, url
+
 urlpatterns = patterns(
     '',
     url(r'^$', 'frontend.views.main.index', name='main_index'),
@@ -8,6 +10,9 @@ urlpatterns = patterns(
     url(r'^order', 'frontend.views.main.order', name='main_order'),
     url(r'^login', 'frontend.views.main.login', name='main_login'),
     url(r'^contact', 'frontend.views.main.contact', name='main_contact'),
+
+    # 用户注册
+    url(r'^user_register', 'frontend.views.main.user_register', name='main_user_register'),
 
     # url('hell', 'views.main.hellow', name='main_hellow'),
     # url(r'^logout/$', 'user.LogoutUser', name='logouturl'),
