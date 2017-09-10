@@ -13,7 +13,7 @@ def index2(request):
     # return render(request, 'frontend/index.html', dict())
 
 def register(request):
-    return render(request, 'frontend/order.html', dict())
+    return render(request, 'frontend/register.html', dict())
 
 
 def popular_restaurents(request):
