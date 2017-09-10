@@ -12,7 +12,7 @@ def register(request):
     return render(request, 'frontend/order.html', dict())
 
 
-def popular_Restaurents(request):
+def popular_restaurents(request):
     return render(request, 'frontend/popular-Restaurents.html', dict())
 
 

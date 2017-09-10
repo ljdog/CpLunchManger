@@ -1,9 +1,9 @@
 from django.conf.urls import patterns, include, url
 urlpatterns = patterns(
     '',
-    url(r'', 'frontend.views.main.index', name='main_index'),
+    url(r'^$', 'frontend.views.main.index', name='main_index'),
     url(r'^register', 'frontend.views.main.register', name='main_register'),
-    url(r'^popular_Restaurents', 'frontend.views.main.popular_Restaurents', name='main_popular_Restaurents'),
+    url(r'^popular_restaurents', 'frontend.views.main.popular_restaurents', name='main_popular_restaurents'),
     url(r'^order', 'frontend.views.main.order', name='main_order'),
     url(r'^login', 'frontend.views.main.login', name='main_login'),
     url(r'^contact', 'frontend.views.main.contact', name='main_contact'),
