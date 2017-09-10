@@ -1,230 +1,232 @@
 {% extends "frontend/base.html" %}
 {% block content_section %}
     <!-- content-section-starts -->
-	<div class="content">
-	<div class="main">
-	   <div class="container">
-		  <div class="register">
-		  	  <form action="/user_register" method="post">
-                  {% csrf_token %}
-				 <div class="register-top-grid">
-					<h3>PERSONAL INFORMATION</h3>
-					 <div class="wow fadeInLeft" data-wow-delay="0.4s">
-						<span>姓名<label>*</label></span>
-						<input name="user_name" type="text">
-					 </div>
-{#					 <div class="wow fadeInRight" data-wow-delay="0.4s">#}
-{#						<span>Last Name<label>*</label></span>#}
-{#						<input type="text">#}
-{#					 </div>#}
-					 <div class="wow fadeInLeft" data-wow-delay="0.4s">
-						 <span>邮箱地址<label>*</label></span>
-						 <input name="user_email" type="text">
-					 </div>
-{#					 <div class="clearfix"> </div>#}
-{#					   <a class="news-letter" href="#">#}
-{#						 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up for Newsletter</label>#}
-{#					   </a>#}
-					 </div>
-				     <div class="register-bottom-grid">
-						    <h3>LOGIN INFORMATION</h3>
-							 <div class="wow fadeInLeft" data-wow-delay="0.4s">
-								<span>密码<label>*</label></span>
-								<input name="user_passwd" type="text">
-							 </div>
-							 <div class="wow fadeInLeft" data-wow-delay="0.4s">
-								<span>密码确认<label>*</label></span>
-								<input name="passwd_check" type="text">
-							 </div>
-					 </div>
-                  <div class="register-but">
-                      <input type="submit" value="submit" >
-                  </div>
+    <div class="content">
+        <div class="main">
+            <div class="container">
+                <div class="register register-but">
+                    <form action="/user_register" method="post">
+                        {% csrf_token %}
+                        <div class="register-top-grid">
+                            <h3>PERSONAL INFORMATION</h3>
+                            <div class="wow fadeInLeft" data-wow-delay="0.4s">
+                                <span>账号<label>*</label></span>
+                                <input name="user_name" type="text">
+                            </div>
+                            <div class="wow fadeInRight" data-wow-delay="0.4s">
+                                <span>昵称<label>*</label></span>
+                                <input name="user_nice" type="text">
+                            </div>
+                            <div class="wow fadeInLeft" data-wow-delay="0.4s">
+                                <span>邮箱地址<label>*</label></span>
+                                <input name="user_email" type="text">
+                            </div>
+                            <div class="clearfix"></div>
+                            {#                     <a class="news-letter" href="#">#}
+                            {#                         <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up for Newsletter</label>#}
+                            {#                     </a>#}
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="register-bottom-grid">
+                            <h3>LOGIN INFORMATION</h3>
+                            <div class="wow fadeInLeft" data-wow-delay="0.4s">
+                                <span>密码<label>*</label></span>
+                                <input name="user_passwd" type="password" style="width: 96%; padding: 0.4em;font-size: 1em;">
+                            </div>
+                            <div class="wow fadeInRight" data-wow-delay="0.4s">
+                                <span>密码确认<label>*</label></span>
+                                <input name="passwd_check" type="password" style="width: 96%">
+                            </div>
+                        </div>
+                                          <div class="register-but">
+                                              <input type="submit" value="submit" >
+                                          </div>
 
-					   <div class="clearfix"> </div>
-				</form>
-				<div class="clearfix"> </div>
-				<div class="register-but">
-				   <form >
-					   <input type="submit" value="submit" >
-					   <div class="clearfix"> </div>
-				   </form>
-				</div>
-		   </div>
-	     </div>
-	    </div>
-<div class="special-offers-section">
-			<div class="container">
-				<div class="special-offers-section-head text-center dotted-line">
-					<h4>Special Offers</h4>
-				</div>
-				<div class="special-offers-section-grids">
-				 <div class="m_3"><span class="middle-dotted-line"> </span> </div>
-				   <div class="container">
-					  <ul id="flexiselDemo3">
-						<li>
-							<div class="offer">
-								<div class="offer-image">
-									<img src="/static/images/p1.jpg" class="img-responsive" alt=""/>
-								</div>
-								<div class="offer-text">
-									<h4>Olister Combo pack lorem</h4>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
-									<input type="button" value="Grab It">
-									<span></span>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-						</li>
-						<li>
-							<div class="offer">
-								<div class="offer-image">
-									<img src="/static/images/p2.jpg" class="img-responsive" alt=""/>
-								</div>
-								<div class="offer-text">
-									<h4>Chicken Jumbo pack lorem</h4>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
-									<input type="button" value="Grab It">
-									<span></span>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-						</li>
-						<li>
-							<div class="offer">
-								<div class="offer-image">
-									<img src="/static/images/p3.jpg" class="img-responsive" alt=""/>
-								</div>
-								<div class="offer-text">
-									<h4>Crab Combo pack lorem</h4>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
-									<input type="button" value="Grab It">
-									<span></span>
-								</div>
+                        <div class="clearfix"></div>
+                    </form>
+                    <div class="clearfix"></div>
+{#                    <div class="register-but">#}
+{#                        <form>#}
+{#                            <input type="submit" value="submit">#}
+{#                            <div class="clearfix"></div>#}
+{#                        </form>#}
+{#                    </div>#}
+                </div>
+            </div>
+        </div>
+        <div class="special-offers-section">
+            <div class="container">
+                <div class="special-offers-section-head text-center dotted-line">
+                    <h4>Special Offers</h4>
+                </div>
+                <div class="special-offers-section-grids">
+                    <div class="m_3"><span class="middle-dotted-line"> </span></div>
+                    <div class="container">
+                        <ul id="flexiselDemo3">
+                            <li>
+                                <div class="offer">
+                                    <div class="offer-image">
+                                        <img src="/static/images/p1.jpg" class="img-responsive" alt=""/>
+                                    </div>
+                                    <div class="offer-text">
+                                        <h4>Olister Combo pack lorem</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+                                        <input type="button" value="Grab It">
+                                        <span></span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="offer">
+                                    <div class="offer-image">
+                                        <img src="/static/images/p2.jpg" class="img-responsive" alt=""/>
+                                    </div>
+                                    <div class="offer-text">
+                                        <h4>Chicken Jumbo pack lorem</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+                                        <input type="button" value="Grab It">
+                                        <span></span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="offer">
+                                    <div class="offer-image">
+                                        <img src="/static/images/p3.jpg" class="img-responsive" alt=""/>
+                                    </div>
+                                    <div class="offer-text">
+                                        <h4>Crab Combo pack lorem</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+                                        <input type="button" value="Grab It">
+                                        <span></span>
+                                    </div>
 
-								<div class="clearfix"></div>
-								</div>
-						</li>
-						<li>
-							<div class="offer">
-								<div class="offer-image">
-									<img src="/static/images/p2.jpg" class="img-responsive" alt=""/>
-								</div>
-								<div class="offer-text">
-									<h4>Chicken Jumbo pack lorem</h4>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
-									<input type="button" value="Grab It">
-									<span></span>
-								</div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="offer">
+                                    <div class="offer-image">
+                                        <img src="/static/images/p2.jpg" class="img-responsive" alt=""/>
+                                    </div>
+                                    <div class="offer-text">
+                                        <h4>Chicken Jumbo pack lorem</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+                                        <input type="button" value="Grab It">
+                                        <span></span>
+                                    </div>
 
-								<div class="clearfix"></div>
-								</div>
-					    </li>
-					 </ul>
-				 <script type="text/javascript">
-					$(window).load(function() {
+                                    <div class="clearfix"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <script type="text/javascript">
+                            $(window).load(function () {
 
-						$("#flexiselDemo3").flexisel({
-							visibleItems: 3,
-							animationSpeed: 1000,
-							autoPlay: true,
-							autoPlaySpeed: 3000,
-							pauseOnHover: true,
-							enableResponsiveBreakpoints: true,
-							responsiveBreakpoints: {
-								portrait: {
-									changePoint:480,
-									visibleItems: 1
-								},
-								landscape: {
-									changePoint:640,
-									visibleItems: 2
-								},
-								tablet: {
-									changePoint:768,
-									visibleItems: 3
-								}
-							}
-						});
+                                $("#flexiselDemo3").flexisel({
+                                    visibleItems: 3,
+                                    animationSpeed: 1000,
+                                    autoPlay: true,
+                                    autoPlaySpeed: 3000,
+                                    pauseOnHover: true,
+                                    enableResponsiveBreakpoints: true,
+                                    responsiveBreakpoints: {
+                                        portrait: {
+                                            changePoint: 480,
+                                            visibleItems: 1
+                                        },
+                                        landscape: {
+                                            changePoint: 640,
+                                            visibleItems: 2
+                                        },
+                                        tablet: {
+                                            changePoint: 768,
+                                            visibleItems: 3
+                                        }
+                                    }
+                                });
 
-					});
-				    </script>
-				    <script type="text/javascript" src="/static/js/jquery.flexisel.js"></script>
-				</div>
-			</div>
-		</div>
-		</div>
-<div class="clearfix"></div>
-		<div class="contact-section" id="contact">
-			<div class="container">
-				<div class="contact-section-grids">
-					<div class="col-md-3 contact-section-grid">
-						<h4>Site Links</h4>
-						<ul>
-							<li><i class="point"></i></li>
-							<li class="data"><a href="#">About Us</a></li>
-						</ul>
-						<ul>
-							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Contact Us</a></li>
-						</ul>
-						<ul>
-							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Privacy Policy</a></li>
-						</ul>
-						<ul>
-							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Terms of Use</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 contact-section-grid">
-						<h4>Site Links</h4>
-						<ul>
-							<li><i class="point"></i></li>
-							<li class="data"><a href="#">About Us</a></li>
-						</ul>
-						<ul>
-							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Contact Us</a></li>
-						</ul>
-						<ul>
-							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Privacy Policy</a></li>
-						</ul>
-						<ul>
-							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Terms of Use</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 contact-section-grid">
-						<h4>Follow Us On...</h4>
-						<ul>
-							<li><i class="fb"></i></li>
-							<li class="data"> <a href="#">  Facebook</a></li>
-						</ul>
-						<ul>
-							<li><i class="tw"></i></li>
-							<li class="data"> <a href="#">Twitter</a></li>
-						</ul>
-						<ul>
-							<li><i class="in"></i></li>
-							<li class="data"><a href="#"> Linkedin</a></li>
-						</ul>
-						<ul>
-							<li><i class="gp"></i></li>
-							<li class="data"><a href="#">Google Plus</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 contact-section-grid nth-grid">
-						<h4>Subscribe Newsletter</h4>
-						<p>To get latest updates and food deals every week</p>
-						<input type="text" class="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
-						<input type="submit" value="submit">
-						</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- content-section-ends -->
+                            });
+                        </script>
+                        <script type="text/javascript" src="/static/js/jquery.flexisel.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-section-grids">
+                    <div class="col-md-3 contact-section-grid">
+                        <h4>Site Links</h4>
+                        <ul>
+                            <li><i class="point"></i></li>
+                            <li class="data"><a href="#">About Us</a></li>
+                        </ul>
+                        <ul>
+                            <li><i class="point"></i></li>
+                            <li class="data"><a href="#">Contact Us</a></li>
+                        </ul>
+                        <ul>
+                            <li><i class="point"></i></li>
+                            <li class="data"><a href="#">Privacy Policy</a></li>
+                        </ul>
+                        <ul>
+                            <li><i class="point"></i></li>
+                            <li class="data"><a href="#">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 contact-section-grid">
+                        <h4>Site Links</h4>
+                        <ul>
+                            <li><i class="point"></i></li>
+                            <li class="data"><a href="#">About Us</a></li>
+                        </ul>
+                        <ul>
+                            <li><i class="point"></i></li>
+                            <li class="data"><a href="#">Contact Us</a></li>
+                        </ul>
+                        <ul>
+                            <li><i class="point"></i></li>
+                            <li class="data"><a href="#">Privacy Policy</a></li>
+                        </ul>
+                        <ul>
+                            <li><i class="point"></i></li>
+                            <li class="data"><a href="#">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 contact-section-grid">
+                        <h4>Follow Us On...</h4>
+                        <ul>
+                            <li><i class="fb"></i></li>
+                            <li class="data"><a href="#"> Facebook</a></li>
+                        </ul>
+                        <ul>
+                            <li><i class="tw"></i></li>
+                            <li class="data"><a href="#">Twitter</a></li>
+                        </ul>
+                        <ul>
+                            <li><i class="in"></i></li>
+                            <li class="data"><a href="#"> Linkedin</a></li>
+                        </ul>
+                        <ul>
+                            <li><i class="gp"></i></li>
+                            <li class="data"><a href="#">Google Plus</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 contact-section-grid nth-grid">
+                        <h4>Subscribe Newsletter</h4>
+                        <p>To get latest updates and food deals every week</p>
+                        <input type="text" class="text" value="" onfocus="this.value = '';"
+                               onblur="if (this.value == '') {this.value = '';}">
+                        <input type="submit" value="submit">
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- content-section-ends -->
 {% endblock %}

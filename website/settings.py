@@ -89,7 +89,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-STATIC_ROOT="/"
+SITE_ROOT=os.path.join(os.path.abspath(os.path.dirname(__file__)),'..')
+STATIC_ROOT = os.path.join(SITE_ROOT,'static')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
@@ -97,7 +98,9 @@ AUTH_USER_MODEL = 'mg.User'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    # ("css", os.path.join(STATIC_ROOT, 'css')),
+    # ("js", os.path.join(STATIC_ROOT, 'js')),
+    # ("images", os.path.join(STATIC_ROOT, 'images'))
 )
 
 # set TEMPLATE_DIRS
