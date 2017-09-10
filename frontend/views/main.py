@@ -80,3 +80,6 @@ def user_register(request):
     obj.save()
 
     return HttpResponse('0k')
+
+def user_info(request):
+    return render(request, 'frontend/user_view.html', dict())

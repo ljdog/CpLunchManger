@@ -13,6 +13,8 @@ urlpatterns = patterns(
 
     # 用户注册
     url(r'^user_register', 'frontend.views.main.user_register', name='main_user_register'),
+    # 用户信息
+    url(r'^user_info', 'frontend.views.main.user_info', name='main_user_info'),
 
     # url('hell', 'views.main.hellow', name='main_hellow'),
     # url(r'^logout/$', 'user.LogoutUser', name='logouturl'),
