@@ -8,6 +8,10 @@ def index(request):
     return render(request, 'frontend/index.html', dict())
 
 
+def index2(request):
+    return index(request)
+    # return render(request, 'frontend/index.html', dict())
+
 def register(request):
     return render(request, 'frontend/order.html', dict())
 
