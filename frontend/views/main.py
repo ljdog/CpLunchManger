@@ -2,7 +2,8 @@
 
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
-
+from django import forms
+from mg.forms import AddUserForm, User, RoleList
 
 def index(request):
     return render(request, 'frontend/index.html', dict())
@@ -32,7 +33,7 @@ def contact(request):
     return render(request, 'frontend/contact.html', dict())
 
 def user_register(request):
-    from django import forms
+
     class TestForm(forms.Form):
         user_name = forms.CharField()
         user_email = forms.CharField()
@@ -54,7 +55,7 @@ def user_register(request):
     passwd_check = form.cleaned_data['passwd_check']
     user_email = form.cleaned_data['user_email']
     user_nice = form.cleaned_data['user_nice']
-    from mg.forms import AddUserForm, User, RoleList
+
 
     if User.objects.filter(username=user_name):
         return HttpResponse(u'用户已经存在')
@@ -81,5 +82,17 @@ def user_register(request):
 
     return HttpResponse('0k')
 
+
 def user_info(request):
-    return render(request, 'frontend/user_view.html', dict())
+    username = "xx"
+    user_info = dict()
+    rst = User.objects.filter(username=username)
+    if rst:
+        user_info[u'username'] = rst[0].username
+        user_info[u'email'] = rst[0].email
+        user_info[u'is_active'] = rst[0].is_active
+        user_info[u'username'] = rst[0].username
+        user_info[u'sex'] = rst[0].sex
+        user_info[u'role'] = rst[0].role
+
+    return render(request, 'frontend/user_view.html', user_info)
